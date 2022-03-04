@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import s from './Navbar.module.css';
+import DashboardRedirect from '../DashboardRedirect/DashboardRedirect';
 
 import Logo from 'components/icons/Logo';
 import { useUser } from 'utils/useUser';
@@ -54,9 +55,14 @@ const Navbar = () => {
               Choose Your Plan
             </a>
           </Link>
+          {!!user && (
+              <Link href="/account">
+                  <a className='ml-2'>Dashboard</a>
+              </Link>
+            )}
           <div className="flex flex-1 justify-end space-x-8 px-2">
             {user ? (
-              <Link href="#">
+              <Link href="/">
                 <a
                   className={s.link}
                   onClick={async () => {
@@ -71,6 +77,7 @@ const Navbar = () => {
               <Link href="/signin">
                 <a className={s.link}>Sign in</a>
               </Link>
+              
             )}
           </div>
         </div>
