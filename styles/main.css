@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@400;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +11,7 @@
 }
 
 *:focus {
-  @apply outline-none ring-2 ring-pink-500 ring-opacity-50;
+  @apply outline-none;
 }
 
 html {
@@ -25,7 +27,7 @@ body {
     'Helvetica', sans-serif;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
-  @apply text-white bg-zinc-800 antialiased;
+  @apply text-zinc-800 bg-white antialiased;
 }
 
 body {

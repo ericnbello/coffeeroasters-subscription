@@ -15,7 +15,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <div className="bg-black">
+    <div className="bg-darkGreyBlue">
       <UserProvider supabaseClient={supabaseClient}>
         <MyUserContextProvider supabaseClient={supabaseClient}>
           <Layout>

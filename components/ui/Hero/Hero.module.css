@@ -1,0 +1,8 @@
+.root {
+    @apply sticky top-0 bg-white z-40 transition-all duration-150;
+  }
+  
+.hero {
+    @apply bg-[url('/public/image-hero-coffeepress-mobile.jpg')] md:bg-[url('/public/image-hero-coffeepress-tablet.jpg')] lg:bg-[url('/public/image-hero-coffeepress-desktop.jpg')]
+}
+  

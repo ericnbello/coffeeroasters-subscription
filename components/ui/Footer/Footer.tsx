@@ -3,54 +3,52 @@ import s from './Footer.module.css';
 
 import Logo from 'components/icons/Logo';
 import GitHub from 'components/icons/GitHub';
+import Instagram from 'components/icons/Instagram';
+import Facebook from 'components/icons/Facebook';
+import Twitter from 'components/icons/Twitter';
 
 export default function Footer() {
   return (
-    <footer className="mx-auto max-w-[1920px] px-6 bg-zinc-900">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 border-b border-zinc-600 py-12 text-white transition-colors duration-150 bg-zinc-900">
-        <div className="col-span-1 lg:col-span-2">
-          <Link href="/">
-            <a className="flex flex-initial items-center font-bold md:mr-24">
-              <span className="rounded-full border border-zinc-700 mr-2">
-                <Logo />
-              </span>
-              <span>ACME</span>
-            </a>
-          </Link>
+    <footer className="mx-auto max-w-[1920px] px-24">
+      <div className="flex flex-col lg:flex-row font-barlow gap-8 border-zinc-600 py-12 text-gray text-sm transition-colors duration-150 bg-darkGrayBlue justify-between">
+        <div className="flex flex-col lg:flex-row gap-5 mg:gap-12 lg:gap-20 align-center uppercase">
+          <div className="flex flex-row justify-center">
+            <Link href="/">
+              <a className="">
+                <span className="mr-2">
+                  <Logo />
+                </span>
+              </a>
+            </Link>
+          </div>
+          <div className="flex flex-row justify-evenly">
+            <ul className="flex flex-col md:flex-row text-center gap-5 md:gap-10">
+              <li className="py-3 md:py-0 md:pb-4">
+                <Link href="/">
+                  <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
+                    Home
+                  </a>
+                </Link>
+              </li>
+              <li className="py-3 md:py-0 md:pb-4">
+                <Link href="/about">
+                  <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
+                    About Us
+                  </a>
+                </Link>
+              </li>
+              <li className="py-3 md:py-0 md:pb-4">
+                <Link href="/pricing">
+                  <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
+                    Create Your Plan
+                  </a>
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className="col-span-1 lg:col-span-2">
-          <ul className="flex flex-initial flex-col md:flex-1">
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  About
-                </a>
-              </Link>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  Careers
-                </a>
-              </Link>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  Blog
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-1 lg:col-span-2">
+        
+        {/* <div className="col-span-1 lg:col-span-2">
           <ul className="flex flex-initial flex-col md:flex-1">
             <li className="py-3 md:py-0 md:pb-4">
               <p className="text-white font-bold hover:text-zinc-200 transition ease-in-out duration-150">
@@ -72,19 +70,37 @@ export default function Footer() {
               </Link>
             </li>
           </ul>
-        </div>
-        <div className="col-span-1 lg:col-span-6 flex items-start lg:justify-end text-white">
+        </div> */}
+        <div className="flex flex-row justify-center lg:justify-end text-white">
           <div className="flex space-x-6 items-center h-10">
-            <a
+            {/* <a
               aria-label="Github Repository"
               href="https://github.com/vercel/nextjs-subscription-payments"
             >
               <GitHub />
+            </a> */}
+            <a
+              aria-label="Facebook Profile"
+              href="https://facebook.com"
+            >
+              <Facebook />
+            </a>
+            <a
+              aria-label="Twitter Profile"
+              href="https://twitter.com"
+            >
+              <Twitter />
+            </a>
+            <a
+              aria-label="Instagram Profile"
+              href="https://instagram.com"
+            >
+              <Instagram />
             </a>
           </div>
         </div>
       </div>
-      <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-zinc-900">
+      {/* <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-darkGrayBlue">
         <div>
           <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
         </div>
@@ -98,7 +114,7 @@ export default function Footer() {
             />
           </a>
         </div>
-      </div>
+      </div> */}
     </footer>
   );
 }

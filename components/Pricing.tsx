@@ -47,7 +47,7 @@ export default function Pricing({ products }: Props) {
 
   if (!products.length)
     return (
-      <section className="bg-black">
+      <section className="bg-white">
         <div className="max-w-6xl mx-auto py-8 sm:py-24 px-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:flex-col sm:align-center"></div>
           <p className="text-6xl font-extrabold text-white sm:text-center sm:text-6xl">
@@ -67,15 +67,14 @@ export default function Pricing({ products }: Props) {
     );
 
   return (
-    <section className="bg-black">
+    <section className="bg-white">
       <div className="max-w-6xl mx-auto py-8 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:flex-col sm:align-center">
-          <h1 className="text-4xl font-extrabold text-white sm:text-center sm:text-6xl">
-            Pricing Plans
+          <h1 className="text-4xl font-extrabold text-black sm:text-center sm:text-6xl">
+            Create a plan
           </h1>
-          <p className="mt-5 text-xl text-zinc-200 sm:text-center sm:text-2xl max-w-2xl m-auto">
-            Start building for free, then add a site plan to go live. Account
-            plans unlock additional features.
+          <p className="mt-5 text-xl text-darkGreyBlue sm:text-center sm:text-2xl max-w-2xl m-auto">
+          Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.
           </p>
           <div className="relative self-center mt-6 bg-zinc-900 rounded-lg p-0.5 flex sm:mt-8 border border-zinc-800">
             <button
@@ -131,7 +130,7 @@ export default function Pricing({ products }: Props) {
                   </h2>
                   <p className="mt-4 text-zinc-300">{product.description}</p>
                   <p className="mt-8">
-                    <span className="text-5xl font-extrabold white">
+                    <span className="text-5xl font-extrabold text-white">
                       {priceString}
                     </span>
                     <span className="text-base font-medium text-zinc-100">
@@ -155,7 +154,7 @@ export default function Pricing({ products }: Props) {
             );
           })}
         </div>
-        <div>
+        {/* <div>
           <p className="mt-24 text-xs uppercase text-zinc-400 text-center font-bold tracking-[0.3em]">
             Brought to you by
           </p>
@@ -206,7 +205,7 @@ export default function Pricing({ products }: Props) {
               </a>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

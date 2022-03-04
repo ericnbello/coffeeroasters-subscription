@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
 import { useUser } from '@supabase/supabase-auth-helpers/react';
 import { supabaseClient } from '@supabase/supabase-auth-helpers/nextjs';
+import { Auth, Typography } from "@supabase/ui";
+import { supabase } from "utils/supabase-client";
 
 import Button from 'components/ui/Button';
 import GitHub from 'components/icons/GitHub';
@@ -11,6 +13,7 @@ import LoadingDots from 'components/ui/LoadingDots';
 import Logo from 'components/icons/Logo';
 import { Provider } from '@supabase/supabase-js';
 import { getURL } from '@/utils/helpers';
+import Facebook from '@/components/icons/Facebook';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -68,7 +71,7 @@ const SignIn = () => {
           <div className="flex justify-center pb-12 ">
             <Logo width="64px" height="64px" />
           </div>
-          <div className="flex flex-col space-y-4">
+          {/* <div className="flex flex-col space-y-4">
             {message.content && (
               <div
                 className={`${
@@ -179,7 +182,19 @@ const SignIn = () => {
             <GitHub />
             <span className="ml-2">Continue with GitHub</span>
           </Button>
+          <Button
+            variant="slim"
+            type="submit"
+            disabled={loading}
+            onClick={() => handleOAuthSignIn('facebook')}
+          >
+            <Facebook className="fill-black"/>
+            <span className="ml-2">Continue with Facebook</span>
+          </Button> */}
+          <Auth providers={['facebook', 'google', 'github']} supabaseClient={supabase}  />
+
         </div>
+
       </div>
     );
 

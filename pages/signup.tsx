@@ -9,6 +9,8 @@ import Input from 'components/ui/Input';
 import Logo from 'components/icons/Logo';
 import { updateUserName } from 'utils/supabase-client';
 import { User } from '@supabase/gotrue-js';
+import { Auth, Typography } from "@supabase/ui";
+import { supabase } from "utils/supabase-client";
 
 const SignUp = () => {
   const [newUser, setNewUser] = useState<User | null>(null);
@@ -60,7 +62,7 @@ const SignUp = () => {
         <div className="flex justify-center pb-12 ">
           <Logo width="64px" height="64px" />
         </div>
-        <form onSubmit={handleSignup} className="flex flex-col space-y-4">
+        {/* <form onSubmit={handleSignup} className="flex flex-col space-y-4">
           {message.content && (
             <div
               className={`${
@@ -106,10 +108,48 @@ const SignUp = () => {
               </a>
             </Link>
           </span>
-        </form>
+        </form> */}
+        {/* <Auth providers={['facebook', 'google', 'github']} supabaseClient={supabase}/> */}
+
       </div>
     </div>
   );
 };
 
 export default SignUp;
+
+
+// import { Auth, Typography, Button } from "@supabase/ui";
+// import { createClient } from "@supabase/supabase-js";
+
+// const { Text } = Typography
+
+// // Create a single supabase client for interacting with your database
+// const supabase = createClient(
+//   "https://xyzcompany.supabase.co",
+//   "public-anon-key"
+// );
+
+// const Container = (props) => {
+//   const { user } = Auth.useUser();
+//   if (user)
+//     return (
+//       <>
+//         <Text>Signed in: {user.email}</Text>
+//         <Button block onClick={() => props.supabaseClient.auth.signOut()}>
+//           Sign out
+//         </Button>
+//       </>
+//     );
+//   return props.children;
+// };
+
+// export default function SignUp() {
+//   return (
+//     <Auth.UserContextProvider supabaseClient={supabase}>
+//       <Container supabaseClient={supabase}>
+//         <Auth providers={['facebook', 'google', 'github']} supabaseClient={supabase}/>
+//       </Container>
+//     </Auth.UserContextProvider>
+//   );
+// };
