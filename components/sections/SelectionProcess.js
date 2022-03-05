@@ -17,7 +17,7 @@ export default function SelectionProcess() {
     return (
         <section className="p-20">
             <div className="flex flex-col">
-                <h2 className="flex justify-center md:justify-start font-fraunces font-bold text-2xl">How it works</h2>
+                <h2 className="flex justify-center md:justify-start font-fraunces font-bold text-2xl pb-16">How it works</h2>
                 {/* <img className="hidden md:flex" src={} /> */}
             </div>
             <div className="flex flex-col md:flex-row">
@@ -30,7 +30,7 @@ export default function SelectionProcess() {
                 ))}
             </div>
             <div className="flex justify-center md:justify-start pt-6 pb-20">
-                <a className='text-center text-lightCream font-fraunces font-bold rounded-lg bg-darkCyan p-2 hover:bg-lightCyan w-1/2 md:w-1/6' href="/pricing">Create your plan</a>
+                <a className='text-center text-lightCream font-fraunces font-bold rounded-sm bg-darkCyan p-3 hover:bg-lightCyan w-1/2 md:w-1/4' href="/pricing">Create your plan</a>
             </div>
         </section>
     )
@@ -38,13 +38,13 @@ export default function SelectionProcess() {
 
 const StepCard = ({ title, description, number }) => {
     return (
-        <div className="flex">
-            <div className="flex flex-col justify-evenly text-center md:text-left">
+        <div className="w-full">
+            <div className="flex flex-col justify-evenly text-center md:text-left md:w-2/3 lg:w-3/4">
                 <h2 className="font-fraunces text-6xl font-bold text-paleOrange">{number.length === 1 ? "0" + number : number}</h2>
                 <h3 className="font-fraunces font-bold text-2xl py-5">
                 {title}
                 </h3>
-                <p className="font-barlow text-sm py-5">{description}</p>
+                <p className="font-barlow text-sm pt-5">{description}</p>
             </div>
         </div>
     );

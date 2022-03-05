@@ -24,9 +24,9 @@ export default function Collection() {
 
     return (
         <sectiion className="mx-auto p-6">
-            <div className="p-10">
+            <div className="px-10">
                 <div className="flex justify-center">
-                    <h2 className="font-fraunces text-7xl">our collection</h2>
+                    <h2 className="font-fraunces font-bold text-5xl md:text-8xl lg:text-9xl md:-mb-16 text-transparent bg-clip-text bg-gradient-to-b from-black md:from-slate-400 to-white">our collection</h2>
                 </div>
                 <div className="flex flex-col lg:flex-row justify-center">
                     {collection.map((product, i) => (
@@ -50,11 +50,11 @@ const CollectionCard = ({ title, description, img}) => {
                 <img
                     src={img}
                     alt="coffeeroasters-product"
-                    className="object-cover h-full w-full"
+                    className="object-cover h-full w-full px-10"
                 />
             </div>
             <div className="flex flex-col justify-start">
-                <h1 className="font-fraunces text-center md:text-left lg:text-center text-gray-50 font-bold text-xl px-2 py-5">
+                <h1 className="font-fraunces text-center md:text-left lg:text-center text-gray-50 font-bold text-xl px-2 pt-5">
                 {title}
                 </h1>
                 <p className="font-barlow text-center md:text-left lg:text-center text-gray-50 text-sm px-2 py-5">{description}</p>

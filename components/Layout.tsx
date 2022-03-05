@@ -40,7 +40,7 @@ export default function Layout({ children, meta: pageMeta }: Props) {
         <meta name="twitter:image" content={meta.cardImage} />
       </Head>
       <Navbar />
-      <main id="skip">{children}</main>
+      <main id="skip" className='max-w-[1200px] mx-auto'>{children}</main>
       <Footer />
     </>
   );

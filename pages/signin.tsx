@@ -66,13 +66,13 @@ const SignIn = () => {
 
   if (!user)
     return (
-      <div className="flex justify-center height-screen-helper">
+      <div className="flex justify-center height-screen-helper bg-white text-black">
         <div className="flex flex-col justify-between max-w-lg p-3 m-auto w-80 ">
           <div className="flex justify-center pb-12 ">
             <Logo width="64px" height="64px" />
           </div>
           {/* <div className="flex flex-col space-y-4">
-            {message.content && (
+             {message.content && (
               <div
                 className={`${
                   message.type === 'error' ? 'text-pink-500' : 'text-green-500'
@@ -137,7 +137,7 @@ const SignIn = () => {
             <span className="pt-1 text-center text-sm">
               <a
                 href="#"
-                className="text-zinc-200 text-accent-9 hover:underline cursor-pointer"
+                className="text-black text-accent-9 hover:underline cursor-pointer"
                 onClick={() => {
                   if (showPasswordInput) setPassword('');
                   setShowPasswordInput(!showPasswordInput);
@@ -151,7 +151,7 @@ const SignIn = () => {
             </span>
 
             <span className="pt-1 text-center text-sm">
-              <span className="text-zinc-200">Don't have an account?</span>
+              <span className="text-black">Don't have an account?</span>
               {` `}
               <Link href="/signup">
                 <a className="text-accent-9 font-bold hover:underline cursor-pointer">
@@ -191,10 +191,8 @@ const SignIn = () => {
             <Facebook className="fill-black"/>
             <span className="ml-2">Continue with Facebook</span>
           </Button> */}
-          <Auth providers={['facebook', 'google', 'github']} supabaseClient={supabase}  />
-
+          <Auth providers={['facebook', 'google']} supabaseClient={supabase} view={'sign_in'}/>
         </div>
-
       </div>
     );
 

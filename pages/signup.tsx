@@ -57,7 +57,7 @@ const SignUp = () => {
   }, [newUser, user]);
 
   return (
-    <div className="flex justify-center height-screen-helper">
+    <div className="flex justify-center height-screen-helper bg-white">
       <div className="flex flex-col justify-between max-w-lg p-3 m-auto w-80 ">
         <div className="flex justify-center pb-12 ">
           <Logo width="64px" height="64px" />
@@ -109,7 +109,7 @@ const SignUp = () => {
             </Link>
           </span>
         </form> */}
-        {/* <Auth providers={['facebook', 'google', 'github']} supabaseClient={supabase}/> */}
+        <Auth providers={['facebook', 'google', 'github']} supabaseClient={supabase} magicLink={true} view={'sign_up'} redirectTo={'/account'}/>
 
       </div>
     </div>
