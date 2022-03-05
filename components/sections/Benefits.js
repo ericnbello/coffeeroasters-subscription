@@ -20,7 +20,7 @@ export default function Benefits() {
         <sectiion className="mx-auto p-6">
             <div className="flex flex-col justify-start bg-darkGreyBlue text-lightCream h-[55rem] md:h-[35rem] lg:h-[30rem] p-16 mx-5 z-0 gap-10 relative rounded-lg">
                 <div className="flex justify-center">
-                    <h2 className="font-fraunces font-bold text-4xl">Why choose us?</h2>
+                    <h2 className="font-fraunces font-bold text-2xl md:text-4xl">Why choose us?</h2>
                 </div>
                 <div className="flex justify-center">
                     <p className="font-barlow text-sm md:text-lg text-center w-full md:w-2/3">
@@ -44,7 +44,7 @@ export default function Benefits() {
 
 const BenefitCard = ({ title, description, icon}) => {
     return (
-        <div className="benefit-card flex flex-col items-center md:flex-row md:justify-between lg:flex-col p-6 px-16 pt-16 md:pt-0 lg:p-6 lg:px-16 lg:pt-16 md:w-4/5 bg-darkCyan text-lightCream rounded-lg">
+        <div className="benefit-card flex flex-col items-center h-auto lg:min-h-[22rem] md:flex-row md:justify-between lg:flex-col p-6 px-16 pt-16 md:pt-0 lg:p-6 lg:px-16 lg:pt-16 md:w-4/5 bg-darkCyan text-lightCream rounded-lg">
             <div className="md:w-1/3 flex flex-row md:justify-center">
                 <img
                     src={icon}
@@ -52,7 +52,7 @@ const BenefitCard = ({ title, description, icon}) => {
                     className="flex justify-center pt-3"
                 />
             </div>
-            <div className="flex flex-col justify-start md:w-2/3 lg:w-full">
+            <div className="flex flex-col justify-start w-full md:w-2/3 lg:w-full">
                 <h1 className="font-fraunces text-center md:text-left lg:text-center font-bold text-xl px-2 pt-10">
                 {title}
                 </h1>

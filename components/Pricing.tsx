@@ -12,12 +12,13 @@ interface Props {
   products: ProductWithPrice[];
 }
 
-type BillingInterval = 'year' | 'month';
+type BillingInterval = 'week' | 'month' | 'year';
 
 export default function Pricing({ products }: Props) {
   const router = useRouter();
   const [billingInterval, setBillingInterval] =
-    useState<BillingInterval>('month');
+    useState<BillingInterval>('week');
+  const [intervalCount, setIntervalCount] = useState<string>();
   const [priceIdLoading, setPriceIdLoading] = useState<string>();
   const { user, isLoading, subscription } = useUser();
 
@@ -42,12 +43,13 @@ export default function Pricing({ products }: Props) {
       return alert((error as Error)?.message);
     } finally {
       setPriceIdLoading(undefined);
+      setIntervalCount(undefined);
     }
   };
 
   if (!products.length)
     return (
-      <section className="bg-white">
+      <section className="bg-lightCream">
         <div className="max-w-6xl mx-auto py-8 sm:py-24 px-4 sm:px-6 lg:px-8">
           <div className="sm:flex sm:flex-col sm:align-center"></div>
           <p className="text-6xl font-extrabold text-white sm:text-center sm:text-6xl">
@@ -67,28 +69,50 @@ export default function Pricing({ products }: Props) {
     );
 
   return (
-    <section className="bg-white">
+    <section className="bg-lightCream">
       <div className="max-w-6xl mx-auto py-8 sm:py-24 px-4 sm:px-6 lg:px-8">
         <div className="sm:flex sm:flex-col sm:align-center">
-          <h1 className="text-4xl font-extrabold text-black sm:text-center sm:text-6xl">
-            Create a plan
+          <h1 className="text-4xl font-fraunces font-extrabold text-black sm:text-center sm:text-6xl">
+            Create your plan
           </h1>
           <p className="mt-5 text-xl text-darkGreyBlue sm:text-center sm:text-2xl max-w-2xl m-auto">
           Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.
           </p>
-          <div className="relative self-center mt-6 bg-zinc-900 rounded-lg p-0.5 flex sm:mt-8 border border-zinc-800">
+          <div className="relative self-center mt-6 rounded-lg p-0.5 flex sm:mt-8 border border-zinc-800">
+          <button
+              onClick={() => setBillingInterval('week')}
+              type="button"
+              className={`${
+                billingInterval === 'week'
+                  ? 'relative w-1/2 bg-darkCyan border-zinc-800 shadow-sm text-white'
+                  : 'ml-0.5 relative w-1/2 border border-transparent text-zinc-400'
+              } rounded-md m-1 py-2 text-sm font-medium whitespace-nowrap hover:bg-lightCyan hover:text-white focus:outline-none focus:ring-2 focus:ring-darkGreyBlue focus:ring-opacity-50 focus:z-10 sm:w-auto sm:px-8`}
+            >
+              Weekly billing
+            </button>
+            {/* <button
+                onClick={() => (setBillingInterval('week'))}
+                type="button"
+                className={`${
+                  billingInterval === 'year'
+                    ? 'relative w-1/2 bg-darkCyan border-zinc-800 shadow-sm text-white'
+                    : 'ml-0.5 relative w-1/2 border border-transparent text-zinc-400'
+                } rounded-md m-1 py-2 text-sm font-medium whitespace-nowrap hover:bg-lightCyan hover:text-white focus:outline-none focus:ring-2 focus:ring-darkGreyBlue focus:ring-opacity-50 focus:z-10 sm:w-auto sm:px-8`}
+              >
+                Bi-Monthly billing
+            </button> */}
             <button
               onClick={() => setBillingInterval('month')}
               type="button"
               className={`${
                 billingInterval === 'month'
-                  ? 'relative w-1/2 bg-zinc-700 border-zinc-800 shadow-sm text-white'
+                  ? 'relative w-1/2 bg-darkCyan border-zinc-800 shadow-sm text-white'
                   : 'ml-0.5 relative w-1/2 border border-transparent text-zinc-400'
-              } rounded-md m-1 py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 focus:z-10 sm:w-auto sm:px-8`}
+              } rounded-md m-1 py-2 text-sm font-medium whitespace-nowrap hover:bg-lightCyan hover:text-white focus:outline-none focus:ring-2 focus:ring-darkGreyBlue focus:ring-opacity-50 focus:z-10 sm:w-auto sm:px-8`}
             >
               Monthly billing
             </button>
-            <button
+            {/* <button
               onClick={() => setBillingInterval('year')}
               type="button"
               className={`${
@@ -98,7 +122,7 @@ export default function Pricing({ products }: Props) {
               } rounded-md m-1 py-2 text-sm font-medium whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-opacity-50 focus:z-10 sm:w-auto sm:px-8`}
             >
               Yearly billing
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="mt-12 space-y-4 sm:mt-16 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-6 lg:max-w-4xl lg:mx-auto xl:max-w-none xl:mx-0 xl:grid-cols-4">
@@ -116,7 +140,7 @@ export default function Pricing({ products }: Props) {
               <div
                 key={product.id}
                 className={cn(
-                  'rounded-lg shadow-sm divide-y divide-zinc-600 bg-zinc-900',
+                  'rounded-lg shadow-sm divide-y divide-zinc-600 bg-darkGreyBlue',
                   {
                     'border border-pink-500': subscription
                       ? product.name === subscription?.prices?.products?.name
@@ -124,11 +148,11 @@ export default function Pricing({ products }: Props) {
                   }
                 )}
               >
-                <div className="p-6">
+                <div className="p-6 text-center xl:text-left">
                   <h2 className="text-2xl leading-6 font-semibold text-white">
                     {product.name}
                   </h2>
-                  <p className="mt-4 text-zinc-300">{product.description}</p>
+                  <p className="mt-4 text-zinc-300 text-sm">{product.description}</p>
                   <p className="mt-8">
                     <span className="text-5xl font-extrabold text-white">
                       {priceString}
@@ -143,7 +167,7 @@ export default function Pricing({ products }: Props) {
                     disabled={isLoading}
                     loading={priceIdLoading === price.id}
                     onClick={() => handleCheckout(price)}
-                    className="mt-8 block w-full rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-zinc-900"
+                    className="mt-8 block w-full rounded-md py-2 text-sm font-semibold text-white text-center"
                   >
                     {product.name === subscription?.prices?.products?.name
                       ? 'Manage'

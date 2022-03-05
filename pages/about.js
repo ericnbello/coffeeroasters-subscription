@@ -12,7 +12,7 @@ export default function About() {
                     imageTablet="/image-hero-whitecup-tablet.jpg"
                     imageDesktop="/image-hero-whitecup-desktop.jpg"
                     title="About us"
-                    titleStyle='font-fraunces text-5xl font-bold w-full md:w-1/2 py-10'
+                    titleStyle='font-fraunces text-3xl md:text-5xl font-bold w-full md:w-3/4 lg:w-2/3 md:py-10'
                     description="Coffeeroasters began its journey of exotic discovery in 1999, highlighting stories of 
                     coffee from around the world. We have since been dedicated to bring the perfect cup - from 
                     bean to brew - in every shipment."

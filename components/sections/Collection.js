@@ -26,7 +26,7 @@ export default function Collection() {
         <sectiion className="mx-auto p-6">
             <div className="px-10">
                 <div className="flex justify-center">
-                    <h2 className="font-fraunces font-bold text-5xl md:text-8xl lg:text-9xl md:-mb-16 text-transparent bg-clip-text bg-gradient-to-b from-black md:from-slate-400 to-white">our collection</h2>
+                    <h2 className="font-fraunces font-bold text-3xl md:text-8xl lg:text-9xl md:-mb-16 text-transparent bg-clip-text bg-gradient-to-b from-black md:from-slate-400 to-white">our collection</h2>
                 </div>
                 <div className="flex flex-col lg:flex-row justify-center">
                     {collection.map((product, i) => (
