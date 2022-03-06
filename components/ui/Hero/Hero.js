@@ -5,7 +5,7 @@ export default function Hero({imageDesktop, imageTablet, imageMobile, title, tit
     return (
         <section className='flex pb-24'>
             <div className="flex flex-col w-full p-6 mx-auto h-full">
-                <div className='z-10 flex flex-col justify-center min-h-[400px] h-[600px] md:h-auto gap-y-10 absolute max-w-[1200px] left-0 md:left-auto text-center md:text-left text-lightCream p-10 w-full md:w-3/4 lg:w-2/3'>
+                <div className='z-10 flex flex-col md:justify-center min-h-[400px] h-[600px] md:h-auto gap-y-10 absolute max-w-[1200px] left-0 md:left-auto text-center md:text-left text-lightCream p-10 w-full md:w-3/4 lg:w-2/3'>
                     {/* <div className='flex flex-col py-16 md:py-6'> */}
                     <div>
                         <h1 className={titleStyle}>{title}</h1>

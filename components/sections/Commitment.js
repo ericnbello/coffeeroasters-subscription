@@ -1,6 +1,6 @@
 export default function Commitment() {
     return (
-        <section className="px-6">
+        <section className="px-6 pb-24">
             <div className="flex flex-col md:flex-row">
                 <div className="flex flex-row justify-center w-full md:w-1/2 md:justify-start">
                     <img className="flex md:hidden rounded-lg" src="/image-commitment-mobile.jpg" />

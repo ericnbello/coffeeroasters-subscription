@@ -16,7 +16,7 @@ export default function Layout({ children, meta: pageMeta }: Props) {
   const meta = {
     title: 'Coffeeroasters Subscription',
     description: 'A coffee subscription website built with Next.js, Supabase, and Stripe.',
-    cardImage: '/og.png',
+    cardImage: '/logo.svg',
     ...pageMeta
   };
 
@@ -27,14 +27,14 @@ export default function Layout({ children, meta: pageMeta }: Props) {
         <meta name="robots" content="follow, index" />
         <link href="/favicon.ico" rel="shortcut icon" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://subscription-starter.vercel.app${router.asPath}`} />
+        <meta property="og:url" content={`https://coffeeroasters-subscription.vercel.app/${router.asPath}`} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={meta.title} />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.cardImage} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@vercel" />
+        <meta name="twitter:site" content="@ericnbello" />
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.cardImage} />
