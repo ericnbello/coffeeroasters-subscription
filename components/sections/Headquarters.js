@@ -61,10 +61,10 @@ const HeadquarterCard = ({ icon, country, street, city, postalCode, phone}) => {
                 />
             </div>
             <div className="flex flex-col justify-start">
-                <h1 className="font-fraunces text-center md:text-left text-gray-50 font-bold text-xl pt-5">
+                <h1 className="font-fraunces text-center md:text-left text-gray-50 font-bold text-2xl pt-5">
                 {country}
                 </h1>
-                <div className="ont-barlow text-center md:text-left text-gray-50 text-sm py-5">
+                <div className="font-barlow text-center md:text-left text-gray-50 text-lg py-5">
                     <p>{street}</p>
                     <p>{city}</p>
                     <p>{postalCode}</p>

@@ -57,7 +57,7 @@ const Navbar = () => {
           </Link>
           {!!user && (
               <Link href="/account">
-                  <a className='ml-2'>Dashboard</a>
+                  <a className={s.link}>Dashboard</a>
               </Link>
             )}
           <div className="">

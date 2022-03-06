@@ -25,21 +25,21 @@ export default function Footer() {
             <ul className="flex flex-col md:flex-row text-center gap-5 md:gap-10">
               <li className="py-3 md:py-0 md:pb-4">
                 <Link href="/">
-                  <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
+                  <a className="text-white hover:text-lightCyan transition ease-in-out duration-150">
                     Home
                   </a>
                 </Link>
               </li>
               <li className="py-3 md:py-0 md:pb-4">
                 <Link href="/about">
-                  <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
+                  <a className="text-white hover:text-lightCyan transition ease-in-out duration-150">
                     About Us
                   </a>
                 </Link>
               </li>
               <li className="py-3 md:py-0 md:pb-4">
                 <Link href="/pricing">
-                  <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
+                  <a className="text-white hover:text-lightCyan transition ease-in-out duration-150">
                     Create Your Plan
                   </a>
                 </Link>
