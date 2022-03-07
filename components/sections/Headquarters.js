@@ -30,7 +30,7 @@ export default function Headquarters() {
         <section className="p-6">
             {/* <div> */}
                 <div className="flex justify-center md:justify-start py-10">
-                    <h2 className="font-fraunces font-bold text-xl md:text-2xl text-darkGreyBlue py-3">Our headquarters</h2>
+                    <h2 className="font-fraunces font-bold text-2xl md:text-2xl text-darkGreyBlue py-3">Our headquarters</h2>
                 </div>
                 <div className="flex flex-col md:flex-row md:justify-between">
                     {offices.map((location, i) => (

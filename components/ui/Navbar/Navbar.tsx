@@ -18,7 +18,6 @@ const Navbar = () => {
   };
 
   return (
-    <>
     <nav className='flex items-center flex-wrap bg-lightCream py-3 px-6'>
       <Link href='/'>
         <a className='inline-flex items-center p-2 mr-4'>
@@ -52,7 +51,7 @@ const Navbar = () => {
           </Link>
           <Link href='/pricing'>
             <a className={s.link}>
-              Create Your Plan
+              Choose Your Plan
             </a>
           </Link>
           {!!user && (
@@ -83,54 +82,6 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
-
-    {/* <nav className={s.root}>
-      <a href="#skip" className="sr-only focus:not-sr-only">
-        Skip to content
-      </a>
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex justify-between align-center flex-row py-4 md:py-6 relative">
-          <div className="flex flex-1 justify-between items-center">
-            <Link href="/">
-              <a className={s.logo} aria-label="Logo">
-                <Logo />
-              </a>
-            </Link>
-            <nav className="space-x-2 ml-6 hidden lg:flex flex-row justify-end">
-            <Link href="/">
-                <a className={s.link}>Home</a>
-              </Link>
-              <Link href="/pricing">
-                <a className={s.link}>Pricing</a>
-              </Link>
-              <Link href="/account">
-                <a className={s.link}>Account</a>
-              </Link>
-              <div className="flex flex-1 justify-end space-x-8">
-                {user ? (
-                  <Link href="#">
-                    <a
-                      className={s.link}
-                      onClick={async () => {
-                        supabaseClient.auth.signOut();
-                        router.push('/signin');
-                      }}
-                    >
-                      Sign out
-                    </a>
-                  </Link>
-                ) : (
-                  <Link href="/signin">
-                    <a className={s.link}>Sign in</a>
-                  </Link>
-                )}
-              </div>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </nav> */}
-    </>
   );
 };
 

@@ -17,6 +17,7 @@ export default function About() {
                     coffee from around the world. We have since been dedicated to bring the perfect cup - from 
                     bean to brew - in every shipment."
                     // btn=""
+                    btnUrl=""
                 />
                 <Commitment />
                 <Quality />

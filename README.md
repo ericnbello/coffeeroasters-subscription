@@ -1,6 +1,6 @@
 # Frontend Mentor - Coffeeroasters subscription site solution
 
-While this is a solution to the [Coffeeroasters subscription site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6) and Frontend Mentor challenges help you improve your coding skills by building realistic projects, I decided to add extra functionality to create a fully functional SaaS web application.
+While this is a solution to the [Coffeeroasters subscription site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/coffeeroasters-subscription-site-5Fc26HVY6) and Frontend Mentor challenges help you improve your coding skills by building realistic projects, I decided to add extra functionality to create a fully functional subscription web application.
 
 ## Features
 
@@ -8,6 +8,7 @@ While this is a solution to the [Coffeeroasters subscription site challenge on F
 - Powerful data access & management tooling on top of PostgreSQL with [Supabase](https://supabase.io/docs/guides/database)
 - Integration with [Stripe Checkout](https://stripe.com/docs/payments/checkout) and the [Stripe customer portal](https://stripe.com/docs/billing/subscriptions/customer-portal)
 - Automatic syncing of pricing plans and subscription statuses via [Stripe webhooks](https://stripe.com/docs/webhooks)
+- External authentication with Facebook and Google in addition to email and password
 
 ## Overview
 

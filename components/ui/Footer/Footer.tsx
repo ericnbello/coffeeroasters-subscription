@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import s from './Footer.module.css';
 
 import LogoWhite from 'components/icons/LogoWhite';
-import GitHub from 'components/icons/GitHub';
 import Instagram from 'components/icons/Instagram';
 import Facebook from 'components/icons/Facebook';
 import Twitter from 'components/icons/Twitter';
@@ -40,7 +38,7 @@ export default function Footer() {
               <li className="py-3 md:py-0 md:pb-4">
                 <Link href="/pricing">
                   <a className="text-white hover:text-lightCyan transition ease-in-out duration-150">
-                    Create Your Plan
+                    Choose Your Plan
                   </a>
                 </Link>
               </li>
@@ -48,37 +46,8 @@ export default function Footer() {
           </div>
         </div>
         
-        {/* <div className="col-span-1 lg:col-span-2">
-          <ul className="flex flex-initial flex-col md:flex-1">
-            <li className="py-3 md:py-0 md:pb-4">
-              <p className="text-white font-bold hover:text-zinc-200 transition ease-in-out duration-150">
-                LEGAL
-              </p>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  Privacy Policy
-                </a>
-              </Link>
-            </li>
-            <li className="py-3 md:py-0 md:pb-4">
-              <Link href="/">
-                <a className="text-white hover:text-zinc-200 transition ease-in-out duration-150">
-                  Terms of Use
-                </a>
-              </Link>
-            </li>
-          </ul>
-        </div> */}
         <div className="flex flex-row justify-center lg:justify-end text-white">
           <div className="flex space-x-6 items-center h-10">
-            {/* <a
-              aria-label="Github Repository"
-              href="https://github.com/vercel/nextjs-subscription-payments"
-            >
-              <GitHub />
-            </a> */}
             <a
               aria-label="Facebook Profile"
               href="https://facebook.com"
@@ -100,21 +69,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      {/* <div className="py-12 flex flex-col md:flex-row justify-between items-center space-y-4 bg-darkGrayBlue">
-        <div>
-          <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
-        </div>
-        <div className="flex items-center">
-          <span className="text-white">Crafted by</span>
-          <a href="https://vercel.com" aria-label="Vercel.com Link">
-            <img
-              src="/vercel.svg"
-              alt="Vercel.com Logo"
-              className="inline-block h-6 ml-4 text-white"
-            />
-          </a>
-        </div>
-      </div> */}
     </footer>
   );
 }

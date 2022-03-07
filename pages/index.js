@@ -8,13 +8,14 @@ export default function Home() {
         <main className="bg-lightCream">
             <section >
                 <Hero 
-                    imageMobile="/image-hero-coffeepress-mobile.jpg"
+                    imageMobile='image-hero-coffeepress-mobile.jpg'
                     imageTablet="/image-hero-coffeepress-tablet.jpg"
                     imageDesktop="/image-hero-coffeepress-desktop.jpg"
                     title="Great coffee made simple."
                     titleStyle='font-fraunces text-3xl md:text-6xl font-bold w-full md:w-3/4 lg:w-2/3 pt-10 sm:py-10'
                     description="Start your mornings with the world’s best coffees. Try our expertly curated artisan coffees from our best roasters delivered directly to your door, at your schedule."
                     btn="Create your plan"
+                    btnUrl="/plan"
                     />
                 <Collection />
                 <Benefits />

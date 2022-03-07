@@ -1,10 +1,10 @@
 import s from './Hero.module.css';
 import Link from 'next/link';
 
-export default function Hero({imageDesktop, imageTablet, imageMobile, title, titleStyle, description, btn}) {
+export default function Hero({imageDesktop, imageTablet, imageMobile, title, titleStyle, description, btn, btnUrl}) {
     return (
         <section className='flex pb-24'>
-            <div className="flex flex-col w-full p-6 mx-auto h-full">
+            <div className='flex flex-col w-full p-6 mx-auto h-full'>
                 <div className='z-10 flex flex-col md:justify-center min-h-[400px] h-[600px] md:h-auto gap-y-10 absolute max-w-[1200px] left-0 md:left-auto text-center md:text-left text-lightCream p-10 w-full md:w-3/4 lg:w-2/3'>
                     {/* <div className='flex flex-col py-16 md:py-6'> */}
                     <div>
@@ -14,8 +14,8 @@ export default function Hero({imageDesktop, imageTablet, imageMobile, title, tit
                         <p className='font-barlow md:w-1/2 px-6 md:px-0'>{description}</p>
                     </div>
                     <div className="flex justify-center md:justify-start md:py-10">
-                        <Link href="/pricing">
-                            <a className='font-fraunces text-sm font-bold rounded-sm bg-darkCyan p-3 hover:bg-lightCyan text-center w-1/2 md:w-2/5 lg:w-1/5' href="/pricing" style={ btn ? { display:'block'} : {display : 'none'} }>{btn}
+                        <Link href={btnUrl}>
+                            <a className='font-fraunces text-sm font-bold rounded-sm bg-darkCyan p-3 hover:bg-lightCyan text-center w-1/2 md:w-2/5 lg:w-1/5' href={btnUrl} style={ btn ? { display:'block'} : {display : 'none'} }>{btn}
                             </a>
                         </Link>
                     </div>
