@@ -24,7 +24,7 @@ const SignIn = () => {
           <div className="flex justify-center pb-12 ">
             <Logo width="64px" height="64px" />
           </div>
-          <Auth providers={['facebook', 'google']} supabaseClient={supabase} view={'sign_in'}/>
+          <Auth providers={['google']} supabaseClient={supabase} view={'sign_in'}/>
         </div>
       </div>
     );
